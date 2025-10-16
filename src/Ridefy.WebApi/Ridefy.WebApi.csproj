@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0" />
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.19"/>
+        <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.13.1" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.12.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Ridefy.Application\Ridefy.Application.csproj" />
+      <ProjectReference Include="..\Ridefy.Infrastructure.Cqrs\Ridefy.Infrastructure.Cqrs.csproj" />
+      <ProjectReference Include="..\Ridefy.Infrastructure.Messaging\Ridefy.Infrastructure.Messaging.csproj" />
+      <ProjectReference Include="..\Ridefy.Infrastructure.Persistence\Ridefy.Infrastructure.Persistence.csproj" />
+      <ProjectReference Include="..\Ridefy\Ridefy.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Contracts\v1\Requests\RentalMotorcycle\" />
+      <Folder Include="Contracts\v1\Requests\ReturnMotorcycle\" />
+    </ItemGroup>
+
+</Project>
